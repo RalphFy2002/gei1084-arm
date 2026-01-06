@@ -25,25 +25,3 @@ Le décodeur analyse les bits `Op[1:0]` et `Funct` pour générer les signaux de
 Le système utilise les bits de l'instruction pour déterminer l'état de `CondEx`.
 * Si `CondEx = 1`, l'écriture est effectuée, sinon elle est bloquée.
 * Les flags sont mis à jour sélectivement : les quatre flags pour les opérations arithmétiques, et seulement `N` et `Z` pour les opérations logiques.
-
----
-
-## Structure du Code (Aperçu)
-
-### Exemple : Logique des Registres de Flags
-```vhdl
--- Extrait de l'implémentation des registres de flags [cite: 309-325]
-process(clk, reset)
-begin
-    if reset = '1' then
-        Flags_NZ <= (others => '0');
-        Flags_CV <= (others => '0');
-    elsif rising_edge(clk) then
-        if FlagWrite(1) = '1' then
-            Flags_NZ <= ALUFlags(1 downto 0); -- Zero et Negative
-        end if;
-        if FlagWrite(0) = '1' then
-            Flags_CV <= ALUFlags(3 downto 2); -- Overflow et Carry
-        end if;
-    end if;
-end process;
