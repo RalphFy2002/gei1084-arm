@@ -1,6 +1,7 @@
 # Architecture d'un Processeur ARM (VHDL) 
 
-Ce dépôt contient la conception et l'implémentation en VHDL des composants critiques d'un processeur ARM simplifié. [cite_start]Ce projet a été réalisé dans le cadre du cours **GEI1084 - Architecture des ordinateurs et calcul accéléré** à l'Université du Québec à Trois-Rivières (UQTR)[cite: 1, 7, 8].
+Ce dépôt contient la conception et l'implémentation en VHDL des composants critiques d'un processeur ARM simplifié. 
+Ce projet a été réalisé dans le cadre du cours **GEI1084 - Architecture des ordinateurs et calcul accéléré** à l'Université du Québec à Trois-Rivières (UQTR).
 
 ## Présentation du Projet
 L'objectif est de modéliser le fonctionnement interne d'un processeur, du décodage d'instructions à la gestion de la logique conditionnelle.
